@@ -1,0 +1,14 @@
+{
+    "name": "F2C Converter",
+    "version": "0.11",
+    "manifest_version": 2,
+    "description": "Simple app to convert temperatures from fahrenheit to celcius.",
+    "content_scripts": [
+    {
+        "matches": ["http://*/*", "file://*"],
+        "js": ["converter.js"],
+        "css": ["CSS/f2c.css"]
+    }
+    ],
+    "update_url": "https://raw.github.com/skunk27/f2c/master/updates.xml"
+}
