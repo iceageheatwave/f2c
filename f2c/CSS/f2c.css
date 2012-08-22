@@ -6,11 +6,11 @@
         Purpose of the stylesheet follows.
 */
 
-.f2c_temp { 
+.f2c { 
     background-color: #eeeeee;
 }
 
-.f2c_temp:hover {
+.f2c:hover {
     background-color: #dddddd;
 }
 
