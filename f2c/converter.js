@@ -30,7 +30,7 @@ function tempCheck(node) {
     // [2] Weight units, null if temp.
     // [3] First temp if a range exists, null if weight or no range.
     // [4] Second temp if a range exists, or the lone temp. null if weight.
-    var re = /\b(\d{1,4})\s*(lbs?|#|ozs?)|(?:\b(?:(\d{2,3})\s*(?:-|to)\s*)?(\d{2,3})'?\s*\u00B0?\u00BA?\s*f)\b/gi;
+    var re = /\b(\d{1,4}(?:(?:\.|\/)\d{1,2})?)\s*(lbs?|#|ozs?)|(?:\b(?:(\d{2,3})\s*(?:-|to)\s*)?(\d{2,3})'?\s*\u00B0?\u00BA?\s*f)\b/gi;
 
     var nodeText = node.nodeValue;
     var first = 0;
@@ -110,7 +110,7 @@ function convertTemp(temp) {
 function convertWeight(match) {
     
     var replacement = '';
-    var value = parseFloat(match[1]);
+    var value = parseFloat(eval(match[1]));
     
     if (match[2].search(/lb|#/) != -1) {
             
